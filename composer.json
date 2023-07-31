@@ -2,7 +2,7 @@
     "name": "bytes4sale/iplocator",
     "description": "This package will help to provide details information of your provided ip",
     "type": "laravel-package",
-    "license": "Unlicense",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Bytes4sale\\Iplocator\\": "src/"
