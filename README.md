@@ -103,6 +103,39 @@ This allows you to securely store and manage your API keys within your applicati
 | `IPLocator::getTodayRequestCount()` | Get the request count per day                                             |
 | `IpLocatorConfig::setCredentials()` | Set the api credentials details.You can also set in .env file             |
 
+
+## Contributions and Bug Reports
+We welcome contributions from the community to improve bytes4sale IPLocator. If you find a bug or have a suggestion for a new feature, we encourage you to participate and help make this package even better.
+
+### Bug Reports
+
+If you encounter any issues or bugs while using bytes4sale IPLocator, please open an issue in our [GitHub repository](https://github.com/bytes4sale/iplocator). When reporting a bug, please provide as much detail as possible, including:
+- A clear and descriptive title for the issue.
+- Steps to reproduce the bug.
+- Information about your PHP and Laravel versions.
+- Any relevant error messages or screenshots.
+
+### Feature Requests
+
+If you have a new feature idea or enhancement in mind, you can also open an issue in the [GitHub repository](https://github.com/bytes4sale/iplocator). Please outline the feature's functionality and the problem it solves or the value it adds to the package.
+
+### Contributing
+
+We appreciate contributions from the community to help us improve the package. If you'd like to contribute code, please follow these steps:
+
+1. Fork the repository and create a new branch from the `master` branch.
+2. Implement your changes or additions.
+3. Write tests to ensure the new code functions correctly and update existing tests as needed.
+4. Make sure all tests pass.
+5. Create a pull request (PR) to submit your changes. Clearly describe the changes you've made and any related issues or features.
+
+Our team will review your PR, and if everything looks good, we'll merge it into the `master` branch.
+
+By contributing to bytes4sale IPLocator, you agree to make your contributions available under this package.
+
+We appreciate the efforts of our contributors, and your help will make the package better for everyone. Thank you!
+
 ## Acknowledgments
 
 If you find this package helpful, consider giving credit to the authors and contributors.
+
