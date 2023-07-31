@@ -136,7 +136,7 @@ By contributing to bytes4sale IPLocator, you agree to make your contributions av
 We appreciate the efforts of our contributors, and your help will make the package better for everyone. Thank you!
 
 ## License
-The MIT License (MIT). Please see [License File](https://github.com/bytes4sale/iplocator/LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/yaseenahmedpk/iplocator/blob/master/LICENSE.md) for more information.
 
 ## Acknowledgments
 
