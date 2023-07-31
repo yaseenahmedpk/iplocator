@@ -103,3 +103,6 @@ This allows you to securely store and manage your API keys within your applicati
 | `IPLocator::getTodayRequestCount()` | Get the request count per day                                             |
 | `IpLocatorConfig::setCredentials()` | Set the api credentials details.You can also set in .env file             |
 
+## Acknowledgments
+
+If you find this package helpful, consider giving credit to the authors and contributors.
