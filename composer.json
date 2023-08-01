@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Bytes4sale\\Iplocator\\": "src/"
+            "bytes4sale\\iplocator\\": "src/"
         }
     },
     "authors": [{
@@ -15,5 +15,12 @@
     "require": {
         "php": "^7.3|^8.0",
         "laravel/framework": "^8.75"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "bytes4sale\\iplocator\\IpLocatorServiceProvider::class"
+            ]
+        }
     }
 }
