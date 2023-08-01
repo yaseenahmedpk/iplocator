@@ -17,10 +17,10 @@ class IpLocatorController extends Controller
             echo "<pre>";
             print_r($response->getCountryDetails());
             die;
-        } else {
-            echo "<pre>";
-            print_r($response->getErrorResponse());
-            die;
         }
+
+        echo "<pre>";
+        print_r($response->getErrorResponse());
+        die;
     }
 }
