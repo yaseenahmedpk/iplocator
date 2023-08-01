@@ -87,7 +87,7 @@ Getting information for an IP address is a breeze with IPLocator. Simply follow 
 IPLocator allows you to customize its behavior by publishing its configuration file. To do this, run the following artisan command:
 
 ```bash
-php artisan vendor:publish --provider="bytes4sale\iplocator\IPLocatorServiceProvider" --tag="iplocator-config"
+php artisan vendor:publish --tag="iplocator-config"
 ```
 
 After running the command, you will find the configuration file at config/iplocator.php. You can modify the settings as per your needs.
