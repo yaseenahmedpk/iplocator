@@ -1,6 +1,6 @@
 <?php
 
-namespace Bytes4sale\Iplocator\Facades;
+namespace bytes4sale\iplocator\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

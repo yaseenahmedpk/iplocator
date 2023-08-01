@@ -1,9 +1,9 @@
 <?php
 
-namespace Bytes4sale\Iplocator;
+namespace bytes4sale\iplocator;
 
-use Bytes4sale\Iplocator\factory\SourceFactory;
-use Bytes4sale\Iplocator\ipLocatorConfig\IpLocatorConfig;
+use bytes4sale\iplocator\ipLocatorConfig\IpLocatorConfig;
+use bytes4sale\iplocator\factory\SourceFactory;
 use Exception;
 use Illuminate\Support\ServiceProvider;
 
@@ -38,9 +38,8 @@ class IpLocatorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $configFile = __DIR__ . '/../config/IpLocator.php';
         $this->publishes([
-            $configFile => config_path('iplocator.php'),
+            __DIR__ . '/../config/IpLocator.php' => config_path('iplocator.php'),
         ], 'iplocator-config');
     }
 }

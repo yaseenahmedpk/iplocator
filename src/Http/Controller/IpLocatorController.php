@@ -1,9 +1,10 @@
 <?php
 
-namespace Bytes4sale\Iplocator\Http\Controller;
+namespace bytes4sale\iplocator\Http\Controller;
 
 use App\Http\Controllers\Controller;
-use Bytes4sale\Iplocator\Facades\IpLocator;
+use bytes4sale\iplocator\Facades\IpLocator;
+use bytes4sale\iplocator\Facades\IpLocatorConfig;
 
 class IpLocatorController extends Controller
 {

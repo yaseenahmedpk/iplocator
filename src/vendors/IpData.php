@@ -1,9 +1,9 @@
 <?php
 
-namespace Bytes4sale\Iplocator\vendors;
+namespace bytes4sale\iplocator\vendors;
 
-use Bytes4sale\Iplocator\ipLocatorConfig\IpLocatorConfig;
-use Bytes4sale\Iplocator\net\HttpRequest;
+use bytes4sale\iplocator\ipLocatorConfig\IpLocatorConfig;
+use bytes4sale\iplocator\net\HttpRequest;
 use Exception;
 use InvalidArgumentException;
 

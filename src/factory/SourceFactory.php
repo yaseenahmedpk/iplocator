@@ -1,10 +1,10 @@
 <?php
 
-namespace Bytes4sale\Iplocator\factory;
+namespace bytes4sale\iplocator\factory;
 
-use Bytes4sale\Iplocator\ipLocatorConfig\IpLocatorConfig;
-use Bytes4sale\Iplocator\vendors\IpData;
-use Bytes4sale\Iplocator\vendors\IpStack;
+use bytes4sale\iplocator\ipLocatorConfig\IpLocatorConfig;
+use bytes4sale\iplocator\vendors\IpData;
+use bytes4sale\iplocator\vendors\IpStack;
 use Exception;
 
 class SourceFactory
