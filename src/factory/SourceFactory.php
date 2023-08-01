@@ -4,6 +4,7 @@ namespace bytes4sale\iplocator\factory;
 
 use bytes4sale\iplocator\ipLocatorConfig\IpLocatorConfig;
 use bytes4sale\iplocator\vendors\IpData;
+use bytes4sale\iplocator\vendors\IpStack;
 use Exception;
 
 class SourceFactory
@@ -22,11 +23,9 @@ class SourceFactory
             return $this->getSourceClassObject(strtolower($source));
         } else {
             $sourceFromEnv = config('iplocator.source');
-
             if (empty($sourceFromEnv)) {
                 throw new Exception('IP_LOCATOR_SOURCE is missing or empty. Please set it in your .env file or you can call bytes4sale\iplocator\Confid::setSource() to set ipLocator source');
             } else {
-
                 return $this->getSourceClassObject(strtolower($sourceFromEnv));
             }
         }
@@ -38,8 +37,8 @@ class SourceFactory
             case "ipdata":
                 return new IpData($this->config);
                 break;
-            case 'ipinfo':
-                die('here');
+            case 'ipstack':
+                return new IpStack($this->config);
                 break;
             default:
                 throw new Exception('Invalid ip source provided please follow documentation for available ip data sources');

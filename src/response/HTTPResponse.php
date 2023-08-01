@@ -15,7 +15,22 @@ class HTTPResponse
     private $currency;
     private $timeZone;
     private $threat;
+    private $asn;
     private $todayRequestCount;
+    private $continentCode;
+    private $continentName;
+    private $countryCode;
+    private $countryName;
+    private $countryFlag;
+    private $countryFlagEmoji;
+    private $countryFlagEmojiUnicode;
+    private $regionName;
+    private $regionCode;
+    private $city;
+    private $zip;
+    private $isEu;
+    private $latitude;
+    private $longitude;
 
     public function __construct()
     {
@@ -133,7 +148,7 @@ class HTTPResponse
             'successful' => $this->isSuccessful(),
             'statusCode' => $this->getStatusCode(),
             'message' => $this->getMessage(),
-            'description' => $this->getContent()
+            'description' => $this->getContent(),
         ];
     }
     /**
@@ -256,5 +271,236 @@ class HTTPResponse
     public function getTodayRequestCount()
     {
         return $this->todayRequestCount;
+    }
+
+    /**
+     * setContinentCode function
+     *
+     * @param [string] $continentCode
+     * @return void
+     */
+    public function setContinentCode($continentCode)
+    {
+        $this->continentCode = $continentCode;
+    }
+
+    /**
+     * setContinentName function
+     *
+     * @param [string] $continentName
+     * @return void
+     */
+    public function setContinentName($continentName)
+    {
+        $this->continentName = $continentName;
+    }
+
+    /**
+     * getContinent function
+     *
+     * @return array
+     */
+    public function getContinentDetails()
+    {
+        return [
+            'code' => $this->continentCode,
+            'name' => $this->continentName,
+        ];
+    }
+
+    /**
+     * setCountryCode function
+     *
+     * @param [string] $countryCode
+     * @return void
+     */
+    public function setCountryCode($countryCode)
+    {
+        $this->countryCode = $countryCode;
+    }
+
+    /**
+     * setCountryName function
+     *
+     * @param [string] $countryName
+     * @return void
+     */
+    public function setCountryName($countryName)
+    {
+        $this->countryName = $countryName;
+    }
+
+    /**
+     * setCountryFlag function
+     *
+     * @param [string] $countryFlag
+     * @return void
+     */
+    public function setCountryFlag($countryFlag)
+    {
+        $this->countryFlag = $countryFlag;
+    }
+
+    /**
+     * setCountryFlagEmoji function
+     *
+     * @param [string] $countryFlagEmoji
+     * @return void
+     */
+    public function setCountryFlagEmoji($countryFlagEmoji)
+    {
+        $this->countryFlagEmoji = $countryFlagEmoji;
+    }
+    /**
+     * setCountryFlagEmojiUnicode function
+     *
+     * @param [string] $countryFlagEmojiUnicode
+     * @return void
+     */
+    public function setCountryFlagEmojiUnicode($countryFlagEmojiUnicode)
+    {
+        $this->countryFlagEmojiUnicode = $countryFlagEmojiUnicode;
+    }
+
+    /**
+     * getCountryDetails function
+     *
+     * @return array
+     */
+    public function getCountryDetails()
+    {
+        return [
+            'code' => $this->countryCode,
+            'name' => $this->countryName,
+            'flag' => $this->countryFlag,
+            'flagEmoji' => $this->countryFlagEmoji,
+            'flagEmojiUnicode' => $this->countryFlagEmojiUnicode,
+        ];
+    }
+
+    /**
+     * setRegionCode function
+     *
+     * @param [string] $regionCode
+     * @return void
+     */
+    public function setRegionCode($regionCode)
+    {
+        $this->regionCode = $regionCode;
+    }
+    /**
+     * setRegionName function
+     *
+     * @param [string] $regionName
+     * @return void
+     */
+    public function setRegionName($regionName)
+    {
+        $this->regionName = $regionName;
+    }
+
+    /**
+     * getRegionDetails function
+     *
+     * @return array
+     */
+    public function getRegionDetails()
+    {
+        return [
+            'code' => $this->regionCode,
+            'name' => $this->regionName,
+        ];
+    }
+
+    /**
+     * setCity function
+     *
+     * @param [string] $city
+     * @return void
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+    }
+
+    /**
+     * getCity function
+     *
+     * @return void
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * setZip function
+     *
+     * @param [string] $zip
+     * @return void
+     */
+    public function setZip($zip)
+    {
+        $this->zip = $zip;
+    }
+
+    /**
+     * getZip function
+     *
+     * @return void
+     */
+    public function getZip()
+    {
+        return $this->zip;
+    }
+    /**
+     * setEu function
+     *
+     * @param [string] $eu
+     * @return void
+     */
+    public function setEu($eu)
+    {
+        $this->isEu = $eu;
+    }
+
+    /**
+     * isEu function
+     *
+     * @return void
+     */
+    public function isEu()
+    {
+        return $this->isEu;
+    }
+
+    /**
+     * setLatitude function
+     *
+     * @param [string] $latitude
+     * @return void
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
+    }
+
+    /**
+     * setLongitude function
+     *
+     * @param [string] $longitude
+     * @return void
+     */
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
+    }
+
+    public function getLatLong()
+    {
+        return [
+            'lat' => $this->latitude,
+            'long' => $this->longitude,
+        ];
     }
 }

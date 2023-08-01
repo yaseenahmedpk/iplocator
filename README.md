@@ -32,16 +32,26 @@ composer require bytes4sale/iplocator
 ```
 ## Prerequisites
 
-Before using IPLocator, you need to sign up for an API key from the IPData service. This key is required to access their API and fetch IP information. You can register and obtain your API key by visiting their website at [https://www.ipdata.co](https://www.ipdata.co).
+Before using IPLocator, you need to sign up for an API key from the IP data providers you wish to use. IPLocator currently supports the following IP data providers, each offering different sets of information. So key is required to access their API to fetch IP information
+
+1. IPDATA : You can register and obtain your API key by visiting their website at [https://www.ipdata.co](https://www.ipdata.co).
+2. IPSTACK : You can register and obtain your API key by visiting their website at [https://ipstack.com](https://ipstack.com).
+
 
 ## Configuration
-Before using the IPLocator package, you need to set your IPData API key in the .env file of your Laravel project.
+Before using the IPLocator package, you need to set your API key and API Source in the .env file of your Laravel project.
 
 1. Open your Laravel project's root directory.
-2. Create or modify the `.env` file and add the `IPDATA_KEY` with your IPData API key:
+2. Create or modify the `.env` file and add:
 
 ```php
+//for IPDATA
+IP_LOCATOR_SOURCE=IPDATA
 IPDATA_KEY=your_ipdata_api_key_here,
+
+//for IPSTACK
+IP_LOCATOR_SOURCE=IPSTACK
+IPSTACK_KEY=your_ipstack_api_key_here,
 ```
 
 ## Usage
@@ -70,7 +80,7 @@ Getting information for an IP address is a breeze with IPLocator. Simply follow 
         print_r($response->getTodayRequestCount());
          
         } else {
-            print_r($response->getErrorResponse());
+            print_r($response->getErrorResponse();
         }
 ### Configuration
 
@@ -88,20 +98,29 @@ If you want to save the API keys in the database, you can use the `IpLocatorConf
 This allows you to securely store and manage your API keys within your application's database, providing a more flexible and configurable way to use the IpLocator package.
 # Available Methods
 
-| Method                              | Description                                                               |
-| ----------------------------------- | ------------------------------------------------------------------------- |
-| `IPLocator::getStatusCode()`        | Get the status code receiving from the IP Address.                        |
-| `IPLocator::getContent()`           | Get the complete data about IP Address.                                   |
-| `IPLocator::isSuccessful()`         | Get the status of request either succeed or not.                          |
-| `IPLocator::getCarrierDetails()`    | Get Mobile Carrier details of an IP Address.                              |
-| `IPLocator::getErrorResponse()`     | Get complete error details if there is any.                               |
-| `IPLocator::getLanguages()`         | Get the language details of IP Address location.                          |
-| `IPLocator::getCurrency()`          | Get the IP Address home currency.                                         |
-| `IPLocator::getTimeZone()`          | Get the Time Zone of IP Address.                                          |
-| `IPLocator::getThreat()`            | Get malicious IP addresses details. also track Tor nodes and open proxies |
-| `IPLocator::getAsn()`               | Get the ASN details about IP Address                                      |
-| `IPLocator::getTodayRequestCount()` | Get the request count per day                                             |
-| `IpLocatorConfig::setCredentials()` | Set the api credentials details.You can also set in .env file             |
+
+| Method                              | Description                                                                                         |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `IPLocator::getStatusCode()`        | Get the status code receiving from the IP Address.                                                  |
+| `IPLocator::getContent()`           | Get the complete data about IP Address.                                                             |
+| `IPLocator::isSuccessful()`         | Get the status of request either succeed or not.                                                    |
+| `IPLocator::getCarrierDetails()`    | Get Mobile Carrier details of an IP Address.                                                        |
+| `IPLocator::getErrorResponse()`     | Get complete error details if there is any.                                                         |
+| `IPLocator::getLanguages()`         | Get the language details of IP Address location.                                                    |
+| `IPLocator::getCurrency()`          | Get the IP Address home currency.                                                                   |
+| `IPLocator::getTimeZone()`          | Get the Time Zone of IP Address.                                                                    |
+| `IPLocator::getThreat()`            | Get malicious IP addresses details. also track Tor nodes and open proxies                           |
+| `IPLocator::getAsn()`               | Get the ASN details about IP Address                                                                |
+| `IPLocator::getTodayRequestCount()` | Get the request count per day                                                                       |
+| `IPLocator::getContinentDetails()`  | Get the continent details of provided ip                                                            |
+| `IPLocator::getCountryDetails()`    | Get the country details of provided ip                                                              |
+| `IPLocator::getRegionDetails()`     | Get the region details of provided ip                                                               |
+| `IPLocator::getCity()`              | Get the city of provided ip                                                                         |
+| `IPLocator::getZip()`               | Get the zip code of provided ip                                                                     |
+| `IPLocator::isEu()`                 | Returns true or false depending on whether the country is a recognized member of the European Union |
+| `IpLocatorConfig::getLatLong()`     | Get latitude and longitude of provided IP                                                           |
+| `IpLocatorConfig::setSource()`      | Set the api source.You can also set in .env file                                                    |
+| `IpLocatorConfig::setCredentials()` | Set the api credentials details.You can also set in .env file                                       |
 
 
 ## Contributions and Bug Reports
