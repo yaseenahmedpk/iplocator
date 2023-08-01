@@ -1,6 +1,6 @@
 <?php
 
-namespace bytes4sale\iplocator\ipLocatorConfig;
+namespace Bytes4sale\Iplocator\ipLocatorConfig;
 
 
 class IpLocatorConfig

@@ -1,8 +1,8 @@
 <?php
 
-namespace bytes4sale\iplocator\net;
+namespace Bytes4sale\Iplocator\net;
 
-use bytes4sale\iplocator\response\HTTPResponse;
+use Bytes4sale\Iplocator\response\HTTPResponse;
 
 class HttpRequest
 {

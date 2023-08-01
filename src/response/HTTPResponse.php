@@ -1,6 +1,6 @@
 <?php
 
-namespace bytes4sale\iplocator\response;
+namespace Bytes4sale\Iplocator\response;
 
 class HTTPResponse
 {

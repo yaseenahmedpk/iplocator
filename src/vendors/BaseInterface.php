@@ -1,6 +1,6 @@
 <?php
 
-namespace bytes4sale\iplocator\vendors;
+namespace Bytes4sale\Iplocator\vendors;
 
 interface BaseInterface
 {
