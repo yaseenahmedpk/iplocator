@@ -128,7 +128,7 @@ We welcome contributions from the community to improve bytes4sale IPLocator. If 
 
 ### Bug Reports
 
-If you encounter any issues or bugs while using bytes4sale IPLocator, please open an issue in our [GitHub repository](https://github.com/bytes4sale/iplocator). When reporting a bug, please provide as much detail as possible, including:
+If you encounter any issues or bugs while using bytes4sale IPLocator, please open an issue in our [GitHub repository](https://github.com/yaseenahmedpk/iplocator). When reporting a bug, please provide as much detail as possible, including:
 - A clear and descriptive title for the issue.
 - Steps to reproduce the bug.
 - Information about your PHP and Laravel versions.
@@ -136,7 +136,7 @@ If you encounter any issues or bugs while using bytes4sale IPLocator, please ope
 
 ### Feature Requests
 
-If you have a new feature idea or enhancement in mind, you can also open an issue in the [GitHub repository](https://github.com/bytes4sale/iplocator). Please outline the feature's functionality and the problem it solves or the value it adds to the package.
+If you have a new feature idea or enhancement in mind, you can also open an issue in the [GitHub repository](https://github.com/yaseenahmedpk/iplocator). Please outline the feature's functionality and the problem it solves or the value it adds to the package.
 
 ### Contributing
 
