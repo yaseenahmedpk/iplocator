@@ -52,6 +52,9 @@ IPDATA_KEY=your_ipdata_api_key_here,
 //for IPSTACK
 IP_LOCATOR_SOURCE=IPSTACK
 IPSTACK_KEY=your_ipstack_api_key_here,
+
+//for IP-API
+IP_LOCATOR_SOURCE=IP-API
 ```
 
 ## Usage
@@ -119,6 +122,7 @@ This allows you to securely store and manage your API keys within your applicati
 | `IPLocator::getZip()`               | Get the zip code of provided ip                                                                     |
 | `IPLocator::isEu()`                 | Returns true or false depending on whether the country is a recognized member of the European Union |
 | `IpLocatorConfig::getLatLong()`     | Get latitude and longitude of provided IP                                                           |
+| `IpLocatorConfig::getIsp()`         | Get the Internet provider information                                                               |
 | `IpLocatorConfig::setSource()`      | Set the api source.You can also set in .env file                                                    |
 | `IpLocatorConfig::setCredentials()` | Set the api credentials details.You can also set in .env file                                       |
 

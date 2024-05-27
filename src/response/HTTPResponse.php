@@ -31,6 +31,7 @@ class HTTPResponse
     private $isEu;
     private $latitude;
     private $longitude;
+    private $isp;
 
     public function __construct()
     {
@@ -502,5 +503,14 @@ class HTTPResponse
             'lat' => $this->latitude,
             'long' => $this->longitude,
         ];
+    }
+    public function setIsp($isp)
+    {
+        $this->isp = $isp;
+    }
+
+    public function getIsp()
+    {
+        return $this->isp;
     }
 }

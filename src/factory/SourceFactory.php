@@ -36,13 +36,12 @@ class SourceFactory
         switch ($source) {
             case "ipdata":
                 return new IpData($this->config);
-                break;
             case 'ipstack':
                 return new IpStack($this->config);
-                break;
+            case 'ip-api':
+                return new IpStack($this->config);
             default:
                 throw new Exception('Invalid ip source provided please follow documentation for available ip data sources');
-                break;
         }
     }
 }

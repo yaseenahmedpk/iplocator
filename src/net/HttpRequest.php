@@ -40,4 +40,35 @@ class HttpRequest
 
         return $httpResponse;
     }
+
+    public static function post($url, $data, $contentType, $headers = [])
+    {
+
+        $ch = curl_init();
+        // Set cURL options
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'Content-Type: ' . $contentType,
+            'Content-Length: ' . strlen($data)
+        ]);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        $responseBody = curl_exec($ch);
+        $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        $httpResponse = new HTTPResponse();
+        $httpResponse->setStatusCode($statusCode);
+        $httpResponse->setContent($responseBody);
+        $httpResponse->setRequestString($url);
+
+        if ($statusCode <= 0 || $statusCode != 200) {
+            $httpResponse->setSuccessful(false);
+            $httpResponse->setMessage("could not connect to host");
+        } else {
+            $httpResponse->setSuccessful(true);
+        }
+
+        return $httpResponse;
+    }
 }
