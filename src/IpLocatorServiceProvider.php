@@ -16,8 +16,6 @@ class IpLocatorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // print_r(__DIR__ . '/config/IpLocator.php');
-        // die;
         $this->mergeConfigFrom(__DIR__ . '/config/IpLocator.php', 'iplocator');
         $this->app->singleton('ipLocatorConfig', function () {
             return new IpLocatorConfig();
@@ -28,7 +26,7 @@ class IpLocatorServiceProvider extends ServiceProvider
                 $sourceFactoryObject = new SourceFactory($config);
                 return $sourceFactoryObject->getSource();
             } catch (Exception $ex) {
-                throw new Exception('Unable to get source class object');
+                throw new Exception('Unable to get source class object OR maybe you have forgotten to set IP_LOCATOR_SOURCE in the env file.');
             }
         });
     }
