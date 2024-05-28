@@ -27,17 +27,17 @@ class IpApi implements BaseInterface
             if ($response->getStatusCode() >= 200 && $response->getStatusCode() <= 300) {
 
                 $responseContentArray = json_decode($response->getContent());
-                if ($responseContentArray->status) {
-                    $response->setTimeZone($responseContentArray->timezone);
-                    $response->setCountryCode($responseContentArray->countryCode);
-                    $response->setCountryName($responseContentArray->country);
-                    $response->setRegionCode($responseContentArray->region);
-                    $response->setRegionName($responseContentArray->regionName);
-                    $response->setCity($responseContentArray->city);
-                    $response->setZip($responseContentArray->zip);
-                    $response->setLatitude($responseContentArray->lat);
-                    $response->setLongitude($responseContentArray->lon);
-                    $response->setIsp($responseContentArray->isp);
+                if ($responseContentArray[0]->status) {
+                    $response->setTimeZone($responseContentArray[0]->timezone);
+                    $response->setCountryCode($responseContentArray[0]->countryCode);
+                    $response->setCountryName($responseContentArray[0]->country);
+                    $response->setRegionCode($responseContentArray[0]->region);
+                    $response->setRegionName($responseContentArray[0]->regionName);
+                    $response->setCity($responseContentArray[0]->city);
+                    $response->setZip($responseContentArray[0]->zip);
+                    $response->setLatitude($responseContentArray[0]->lat);
+                    $response->setLongitude($responseContentArray[0]->lon);
+                    $response->setIsp($responseContentArray[0]->isp);
                 }
             }
             return $response;
