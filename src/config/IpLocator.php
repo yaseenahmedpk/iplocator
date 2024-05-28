@@ -13,7 +13,7 @@ return [
     |
      */
 
-    'source' => env('IP_LOCATOR_SOURCE', 'ipdata'),
+    'source' => env('IP_LOCATOR_SOURCE', ''),
 
     /*
     |--------------------------------------------------------------------------

@@ -16,7 +16,9 @@ class IpLocatorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/IpLocator.php', 'iplocator');
+        // print_r(__DIR__ . '/config/IpLocator.php');
+        // die;
+        $this->mergeConfigFrom(__DIR__ . '/config/IpLocator.php', 'iplocator');
         $this->app->singleton('ipLocatorConfig', function () {
             return new IpLocatorConfig();
         });
@@ -39,7 +41,7 @@ class IpLocatorServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/IpLocator.php' => config_path('iplocator.php'),
+            __DIR__ . '/config/IpLocator.php' => config_path('iplocator.php'),
         ], 'iplocator-config');
     }
 }
