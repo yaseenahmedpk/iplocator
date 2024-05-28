@@ -68,7 +68,7 @@ Getting information for an IP address is a breeze with IPLocator. Simply follow 
    
    'providers' => [
        // Other providers...
-       bytes4sale\iplocator\IPLocatorServiceProvider::class,
+       bytes4sale\iplocator\IpLocatorServiceProvider::class,
    ],
 
 2. **Retrieve IP Information**: Once the package is initialized, you can easily get the details for an IP address:
